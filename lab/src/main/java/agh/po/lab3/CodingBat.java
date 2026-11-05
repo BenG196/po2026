@@ -1,11 +1,31 @@
 package agh.po.lab3;
 
 import java.lang.Math;
+import java.util.Map;
+import java.util.HashMap;
 
 public class CodingBat {
     public static void main(String[] args) {
         CodingBat codingBat = new CodingBat();
     }
+
+    public Map<String, Integer> wordLen(String[] strings) {
+        Map<String, Integer> mapa = new HashMap<>();
+
+        for (int i = 0; i < strings.length; i++) {
+            mapa.put(strings[i], strings[i].length());
+        }
+        return mapa;
+    }
+
+
+    public Map<String, String> mapAB(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            map.put("ab", map.get("a") + map.get("b"));
+        }
+        return map;
+    }
+
 
 
 
@@ -37,8 +57,8 @@ public class CodingBat {
         }
         return evens;
     }
-
     public String helloName(String name) {
         return "Hello " + name + "!";
     }
+
 }
